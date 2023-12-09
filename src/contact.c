@@ -67,15 +67,12 @@ void delete_contact(long contact_index, FILE* file) {
 	free(new_contacts);
 }
 
-void find_contact(FILE* file) {
+void find_contact(char* search_term, FILE* file) {
 	Contact contact;
-	char input[20];
 
 	bool found = false;
 
-	printf("Enter the name of the person you want to search for: ");
-	scanf("%s", input);
-	lowerCase(input);
+	lowerCase(search_term);
 
 	while (fread(&contact, sizeof(Contact), 1, file) == 1) {
         lowercase(contact.name);
