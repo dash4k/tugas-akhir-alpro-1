@@ -66,3 +66,40 @@ void delete_contact(long contact_index, FILE* file) {
 
 	free(new_contacts);
 }
+
+void find_contact(FILE* file) {
+	Contact contact;
+	char input[20];
+
+	bool found = false;
+
+	printf("Enter the name of the person you want to search for: ");
+	scanf("%s", input);
+	lowerCase(input);
+
+	while (fread(&contact, sizeof(Contact), 1, file) == 1) {
+        lowercase(contact.name);
+
+        if (strcmp(input, contact.name) == 0) 
+		{
+            printf("\n%-20s\t%-20s\t%-13s\t", contact.name, contact.email, contact.phone_number);
+            found = true;
+        }
+    }
+
+	if (!found)
+	{
+		printf("DATA NOT FOUND!\n");
+	}
+	
+
+}
+
+void lowerCase(char *str)
+{
+    int length = strlen(str);
+
+    for (int i = 0; i < length; i++) {
+        str[i] = tolower(str[i]);
+    }
+}
