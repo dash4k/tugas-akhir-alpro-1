@@ -2,6 +2,8 @@
   "cmake.sourceDirectory": "/home/jeanjacket/storage/kuliah/git-submodules/tugas-akhir-alpro-1/src",
   "C_Cpp.errorSquiggles": "disabled",
   "files.associations": {
-    "contact.h": "c"
+    "contact.h": "c",
+    "ncurses.h": "c",
+    "string.h": "c"
   }
 }
