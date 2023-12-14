@@ -11,8 +11,9 @@ int main() {
 	while (!quit)
 	{
 		clear_screen();
-		printf("\t\t\t\t\t\t MAIN MENU\n");
-		printf("\n\t\t 1. Add Contact");
+		printf("\t\t\t\t\t\t CONTACT\n\n");
+		printf("\t\t\t\t\t\t MAIN MENU\n\n");
+		printf("\t\t 1. Add Contact");
 		printf("\t\t\t 4. Search Contact");
 		printf("\t\t 7. Exit\n");
 		printf("\t\t 2. Show Contact");
@@ -28,6 +29,8 @@ int main() {
 		case 1:
 			clear_screen();
 
+			printf("\t\t\t\t\t\t ADDING CONTACT\n\n");
+
 			Contact addContact;
 
 			printf("\t\t Enter the name of the person: ");
@@ -41,6 +44,8 @@ int main() {
 
 			clear_screen();
 
+			printf("\t\t\t\t\t\t ADDING CONTACT\n\n");
+
 			printf("\t\t Adding: %s, %s, %s\n", addContact.name, addContact.phone_number, addContact.email);
 			printf("\n\t\t ");
 			system("pause");
@@ -51,6 +56,9 @@ int main() {
 		case 2:
 			clear_screen();
 
+			printf("\t\t\t\t\t\t SHOWING CONTACT\n\n");
+
+			printf("\t\t Index, Name, Phone Number, Email\n");
 			get_contacts(file);
 			
 			printf("\n\t\t ");
@@ -61,6 +69,9 @@ int main() {
 		case 3:
 			clear_screen();
 
+			printf("\t\t\t\t\t\t MODIFYING CONTACT\n\n");
+
+			printf("\t\t Index, Name, Phone Number, Email\n");
 			get_contacts(file);
 			int contactIndex;
 			Contact modifyContact;
@@ -69,6 +80,8 @@ int main() {
 			scanf("%d", &contactIndex);
 
 			clear_screen();
+
+			printf("\t\t\t\t\t\t MODIFYING CONTACT\n\n");
 
 
 			printf("Enter the new name of the contact: ");
@@ -84,7 +97,9 @@ int main() {
 
 			clear_screen();
 
+			printf("\t\t\t\t\t\t MODIFYING CONTACT\n\n");
 
+			printf("\t\t Index, Name, Phone Number, Email\n");
 			get_contacts(file);
 
 			printf("\n\t\t ");
@@ -95,12 +110,16 @@ int main() {
 		case 4:
 			clear_screen();
 
+			printf("\t\t\t\t\t\t SEARCHING CONTACT\n\n");
+
 			char searchContact[50];
 
 			printf("\t\t Search: ");
 			scanf("%s", searchContact);
 
 			clear_screen();
+
+			printf("\t\t\t\t\t\t SEARCHING CONTACT\n\n");
 
 
 			int* searched_positions = search_contacts(searchContact, file);
@@ -121,6 +140,8 @@ int main() {
 		case 5:
 			clear_screen();
 
+			printf("\t\t\t\t\t\t DELETING CONTACT\n\n");
+
 			get_contacts(file);
 			int contactDelete;
 			
@@ -130,6 +151,8 @@ int main() {
 			delete_contact(contactDelete, file);
 
 			clear_screen();
+
+			printf("\t\t\t\t\t\t DELETING CONTACT\n\n");
 
 
 			get_contacts(file);
@@ -142,10 +165,12 @@ int main() {
 		case 6:
 			clear_screen();
 
+			printf("\t\t\t\t\t\t RESETING CONTACT\n\n");
+
 			char seriously;
 
-			printf("\t\t WARNING: You will delete every single data stored in this file\n");
-			printf("\n\t\t Do you want to continue? \n\n\t\t [Y] / [N]: ");
+			printf("\t\t WARNING: This process will delete every single data stored in this file.\n");
+			printf("\n\t\t Do you wish to continue? \n\n\t\t [Y] / [N]: ");
 			
 			scanf("%s", &seriously);
 
@@ -165,6 +190,8 @@ int main() {
 
 		case 7:
 			clear_screen();
+
+			printf("\t\t\t\t\t\t EXITING CONTACT\n\n");
 
 			char isSure;
 			

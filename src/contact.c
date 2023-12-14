@@ -208,6 +208,7 @@ int display_search(int* search_positions, FILE* file) {
 
 	total_contacts = 1;
 	printf("\n\n");
+	printf("\t\t Index, Name, Phone Number, Email\n");
 	while (fread(&contact, sizeof(Contact), 1, file)) {
 		
 		if (search_positions[0] > 0)
