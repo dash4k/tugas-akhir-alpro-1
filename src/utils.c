@@ -10,3 +10,11 @@ char* str_tolower(const char* str) {
   
   return lowercased_string;
 }
+
+void clear_screen(void) {
+    #ifdef _WIN32
+        system("CLS");
+    #else
+        system("clear");
+    #endif
+}

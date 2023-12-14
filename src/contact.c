@@ -14,7 +14,7 @@ int get_contacts(FILE* file) {
 	}
 
 	while (fread(&contact, sizeof(Contact), 1, file)) {
-		printf("%d: %s, %s, %s\n", total_contacts, contact.name, contact.phone_number, contact.email);
+		printf("\t\t %d: %s, %s, %s\n", total_contacts, contact.name, contact.phone_number, contact.email);
 		total_contacts++;
 	}
 
@@ -167,4 +167,78 @@ int* search_contacts(const char* search_term, FILE* file) {
 	fclose(file);
 	return searched_positions;
 
+}
+
+int display_search(int* search_positions, FILE* file) {
+	Contact contact;
+	int total_contacts = 1;
+
+	file = fopen("contact_data.dat", "rb");
+
+	if (file == NULL) {
+		printf("no contact data found, try adding one!");
+		fclose(file);
+		return 1;
+	}
+
+	while (fread(&contact, sizeof(Contact), 1, file)) {
+		
+		if (search_positions[0] > 0) 
+		{	
+			for (int i = 1; i <= search_positions[0]; i++)
+			{
+				if (search_positions[i] == total_contacts)
+				{
+					printf(" %d,", search_positions[i]);
+				}
+			}
+		}
+		total_contacts++;
+	}
+
+	fclose(file);
+
+	file = fopen("contact_data.dat", "rb");
+
+	if (file == NULL) {
+		printf("no contact data found, try adding one!");
+		fclose(file);
+		return 1;
+	}
+
+	total_contacts = 1;
+	printf("\n\n");
+	while (fread(&contact, sizeof(Contact), 1, file)) {
+		
+		if (search_positions[0] > 0)
+		{
+			for (int i = 1; i <= search_positions[0]; i++)
+			{
+				if (search_positions[i] == total_contacts)
+				{
+					printf("\t\t %d: %s, %s, %s\n", total_contacts, contact.name, contact.phone_number, contact.email);
+				}
+			}
+		}
+		total_contacts++;
+	}
+	
+	fclose(file);
+
+	return 0;
+}
+
+int reset_contact(FILE* file) {
+	file = fopen("contact_data.dat", "wb");
+    
+	if (file != NULL) {
+        fclose(file);
+        printf("\n\t\t File reset successfully.\n");
+    } 
+	else {
+        printf("Error opening the file.\n");
+		fclose(file);
+		return 1;
+    }
+    return 0;
 }

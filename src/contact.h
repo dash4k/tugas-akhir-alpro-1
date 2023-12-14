@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <ncurses.h>
+#include <ncurses/ncurses.h>
 #include <ctype.h>
 #include "utils.h"
 
@@ -20,3 +20,5 @@ void add_contact(Contact new_contact, FILE* file);
 int modify_contact(int contact_index, Contact new_contact, FILE* file);
 int delete_contact(int contact_index, FILE* file);
 int* search_contacts(const char* search_term, FILE* file);
+int display_search(int* search_position, FILE* file);
+int reset_contact(FILE* file);

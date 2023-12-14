@@ -4,3 +4,4 @@
 #include <stdio.h>
 
 char* str_tolower(const char* str);
+void clear_screen(void);
