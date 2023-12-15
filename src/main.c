@@ -35,6 +35,7 @@ int main() {
 
 			Contact addContact;
 
+			printf("\t\t Caution: Use the underscore \"_\" instead of spaces \" \" to seperate strings!\n\n");
 			printf("\t\t Enter the name of the person: ");
 			scanf("%s", addContact.name);
 
@@ -73,7 +74,7 @@ int main() {
 		case 3:
 			clear_screen();
 
-			printf("\t\t\t\t\t\t       CONTACT\n\n");
+			printf("\t\t\t\t\t\t      CONTACT\n\n");
 			printf("\t\t\t\t\t\t MODIFYING CONTACT\n\n");
 
 			printf("\t\t Index, Name, Phone Number, Email\n");
@@ -86,24 +87,24 @@ int main() {
 
 			clear_screen();
 
-			printf("\t\t\t\t\t\t       CONTACT\n\n");
+			printf("\t\t\t\t\t\t      CONTACT\n\n");
 			printf("\t\t\t\t\t\t MODIFYING CONTACT\n\n");
 
-
-			printf("Enter the new name of the contact: ");
+			printf("\t\t Caution: Use the underscore \"_\" instead of spaces \" \" to seperate strings!\n\n");
+			printf("\t\t Enter the new name of the contact: ");
 			scanf("%s", modifyContact.name);
 
-			printf("Enter the new number of the contact: ");
+			printf("\t\t Enter the new number of the contact: ");
 			scanf("%s", modifyContact.phone_number);
 
-			printf("Enter the new email of the contact: ");
+			printf("\t\t Enter the new email of the contact: ");
 			scanf("%s", modifyContact.email);
 
 			modify_contact(contactIndex, modifyContact, file);
 
 			clear_screen();
 
-			printf("\t\t\t\t\t\t       CONTACT\n\n");
+			printf("\t\t\t\t\t\t      CONTACT\n\n");
 			printf("\t\t\t\t\t\t MODIFYING CONTACT\n\n");
 
 			printf("\t\t Index, Name, Phone Number, Email\n");
@@ -117,7 +118,7 @@ int main() {
 		case 4:
 			clear_screen();
 
-			printf("\t\t\t\t\t\t       CONTACT\n\n");
+			printf("\t\t\t\t\t\t      CONTACT\n\n");
 			printf("\t\t\t\t\t\t SEARCHING CONTACT\n\n");
 
 			char searchContact[50];
@@ -127,7 +128,7 @@ int main() {
 
 			clear_screen();
 
-			printf("\t\t\t\t\t\t       CONTACT\n\n");
+			printf("\t\t\t\t\t\t      CONTACT\n\n");
 			printf("\t\t\t\t\t\t SEARCHING CONTACT\n\n");
 
 
@@ -149,7 +150,7 @@ int main() {
 		case 5:
 			clear_screen();
 
-			printf("\t\t\t\t\t\t      CONTACT\n\n");
+			printf("\t\t\t\t\t\t     CONTACT\n\n");
 			printf("\t\t\t\t\t\t DELETING CONTACT\n\n");
 
 			get_contacts(file);
@@ -162,7 +163,7 @@ int main() {
 
 			clear_screen();
 
-			printf("\t\t\t\t\t\t      CONTACT\n\n");
+			printf("\t\t\t\t\t\t     CONTACT\n\n");
 			printf("\t\t\t\t\t\t DELETING CONTACT\n\n");
 
 
@@ -176,7 +177,7 @@ int main() {
 		case 6:
 			clear_screen();
 
-			printf("\t\t\t\t\t\t      CONTACT\n\n");
+			printf("\t\t\t\t\t\t     CONTACT\n\n");
 			printf("\t\t\t\t\t\t RESETING CONTACT\n\n");
 
 			char seriously;
