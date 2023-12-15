@@ -3,6 +3,7 @@
 
 
 int main() {
+	printf("\033[44m");
 	printf("\033[1;36m");
 	FILE* file;
 	bool quit = false;
@@ -11,7 +12,7 @@ int main() {
 	while (!quit)
 	{
 		clear_screen();
-		printf("\t\t\t\t\t\t CONTACT\n\n");
+		printf("\t\t\t\t\t\t  CONTACT\n\n");
 		printf("\t\t\t\t\t\t MAIN MENU\n\n");
 		printf("\t\t 1. Add Contact");
 		printf("\t\t\t 4. Search Contact");
@@ -29,6 +30,7 @@ int main() {
 		case 1:
 			clear_screen();
 
+			printf("\t\t\t\t\t\t    CONTACT\n\n");
 			printf("\t\t\t\t\t\t ADDING CONTACT\n\n");
 
 			Contact addContact;
@@ -44,6 +46,7 @@ int main() {
 
 			clear_screen();
 
+			printf("\t\t\t\t\t\t    CONTACT\n\n");
 			printf("\t\t\t\t\t\t ADDING CONTACT\n\n");
 
 			printf("\t\t Adding: %s, %s, %s\n", addContact.name, addContact.phone_number, addContact.email);
@@ -56,6 +59,7 @@ int main() {
 		case 2:
 			clear_screen();
 
+			printf("\t\t\t\t\t\t     CONTACT\n\n");
 			printf("\t\t\t\t\t\t SHOWING CONTACT\n\n");
 
 			printf("\t\t Index, Name, Phone Number, Email\n");
@@ -69,6 +73,7 @@ int main() {
 		case 3:
 			clear_screen();
 
+			printf("\t\t\t\t\t\t       CONTACT\n\n");
 			printf("\t\t\t\t\t\t MODIFYING CONTACT\n\n");
 
 			printf("\t\t Index, Name, Phone Number, Email\n");
@@ -81,6 +86,7 @@ int main() {
 
 			clear_screen();
 
+			printf("\t\t\t\t\t\t       CONTACT\n\n");
 			printf("\t\t\t\t\t\t MODIFYING CONTACT\n\n");
 
 
@@ -97,6 +103,7 @@ int main() {
 
 			clear_screen();
 
+			printf("\t\t\t\t\t\t       CONTACT\n\n");
 			printf("\t\t\t\t\t\t MODIFYING CONTACT\n\n");
 
 			printf("\t\t Index, Name, Phone Number, Email\n");
@@ -110,6 +117,7 @@ int main() {
 		case 4:
 			clear_screen();
 
+			printf("\t\t\t\t\t\t       CONTACT\n\n");
 			printf("\t\t\t\t\t\t SEARCHING CONTACT\n\n");
 
 			char searchContact[50];
@@ -119,6 +127,7 @@ int main() {
 
 			clear_screen();
 
+			printf("\t\t\t\t\t\t       CONTACT\n\n");
 			printf("\t\t\t\t\t\t SEARCHING CONTACT\n\n");
 
 
@@ -140,6 +149,7 @@ int main() {
 		case 5:
 			clear_screen();
 
+			printf("\t\t\t\t\t\t      CONTACT\n\n");
 			printf("\t\t\t\t\t\t DELETING CONTACT\n\n");
 
 			get_contacts(file);
@@ -152,6 +162,7 @@ int main() {
 
 			clear_screen();
 
+			printf("\t\t\t\t\t\t      CONTACT\n\n");
 			printf("\t\t\t\t\t\t DELETING CONTACT\n\n");
 
 
@@ -165,6 +176,7 @@ int main() {
 		case 6:
 			clear_screen();
 
+			printf("\t\t\t\t\t\t      CONTACT\n\n");
 			printf("\t\t\t\t\t\t RESETING CONTACT\n\n");
 
 			char seriously;
@@ -191,6 +203,7 @@ int main() {
 		case 7:
 			clear_screen();
 
+			printf("\t\t\t\t\t\t     CONTACT\n\n");
 			printf("\t\t\t\t\t\t EXITING CONTACT\n\n");
 
 			char isSure;
@@ -202,7 +215,7 @@ int main() {
 
 			if (isSure == 'y')
 			{
-				printf("\n\t\t Good Bye! :< \n\n");
+				printf("\n\t\t\t\t\t\t   Good Bye! :< \n\n");
 				quit = true;
 			}
 			else
@@ -219,5 +232,6 @@ int main() {
 	}	
 	
 	printf("\033[0m");
+	
 	return 0;
 }
