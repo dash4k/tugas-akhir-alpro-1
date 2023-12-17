@@ -1,6 +1,5 @@
 #include "utils.h"
 
-
 char* str_tolower(const char* str) {
   char* lowercased_string = (char*) malloc(strlen(str) * sizeof(char) + sizeof(char));
   for (int i = 0; i < strlen(str); i++) {
@@ -17,4 +16,10 @@ void clear_screen(void) {
     #else
         system("clear");
     #endif
+}
+
+void rmv_newline(char* str) {
+  int len = strlen(str);
+  if( str[len-1] == '\n' )
+    str[len-1] = 0;
 }
