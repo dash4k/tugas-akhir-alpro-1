@@ -234,7 +234,7 @@ int reset_contact(FILE* file) {
     
 	if (file != NULL) {
         fclose(file);
-        printf("\n\t\t File reset successfully.\n");
+        printf("\n\n\t\t\t\t File reset successfully.\n");
     } 
 	else {
         printf("Error opening the file.\n");
