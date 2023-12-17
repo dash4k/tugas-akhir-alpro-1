@@ -14,7 +14,7 @@ int get_contacts(FILE* file) {
 	}
 
 	while (fread(&contact, sizeof(Contact), 1, file)) {
-		printf("\t\t %d: %s, %s, %s\n", total_contacts, contact.name, contact.phone_number, contact.email);
+		printf("\t\t %d: \t %-20s \t\t %-14s \t %-20s\n", total_contacts, contact.name, contact.phone_number, contact.email);
 		total_contacts++;
 	}
 
@@ -208,7 +208,7 @@ int display_search(int* search_positions, FILE* file) {
 
 	total_contacts = 1;
 	printf("\n\n");
-	printf("\t\t Index, Name, Phone Number, Email\n");
+	printf("\t\t Index   Name \t\t\t\t Phone Number \t\t Email\n");
 	while (fread(&contact, sizeof(Contact), 1, file)) {
 		
 		if (search_positions[0] > 0)
@@ -217,7 +217,7 @@ int display_search(int* search_positions, FILE* file) {
 			{
 				if (search_positions[i] == total_contacts)
 				{
-					printf("\t\t %d: %s, %s, %s\n", total_contacts, contact.name, contact.phone_number, contact.email);
+					printf("\t\t %d: \t %-20s \t\t %-14s \t %-20s\n", total_contacts, contact.name, contact.phone_number, contact.email);
 				}
 			}
 		}

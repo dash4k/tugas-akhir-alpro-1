@@ -63,7 +63,7 @@ int main() {
 			printf("\t\t\t\t\t\t     CONTACT\n\n");
 			printf("\t\t\t\t\t\t SHOWING CONTACT\n\n");
 
-			printf("\t\t Index, Name, Phone Number, Email\n");
+			printf("\t\t Index   Name \t\t\t\t Phone Number \t\t Email\n");
 			get_contacts(file);
 			
 			printf("\n\t\t ");
@@ -77,7 +77,7 @@ int main() {
 			printf("\t\t\t\t\t\t      CONTACT\n\n");
 			printf("\t\t\t\t\t\t MODIFYING CONTACT\n\n");
 
-			printf("\t\t Index, Name, Phone Number, Email\n");
+			printf("\t\t Index   Name \t\t\t\t Phone Number \t\t Email\n");
 			get_contacts(file);
 			int contactIndex;
 			Contact modifyContact;
@@ -107,7 +107,7 @@ int main() {
 			printf("\t\t\t\t\t\t      CONTACT\n\n");
 			printf("\t\t\t\t\t\t MODIFYING CONTACT\n\n");
 
-			printf("\t\t Index, Name, Phone Number, Email\n");
+			printf("\t\t Index   Name \t\t\t\t Phone Number \t\t Email\n");
 			get_contacts(file);
 
 			printf("\n\t\t ");
@@ -153,6 +153,7 @@ int main() {
 			printf("\t\t\t\t\t\t     CONTACT\n\n");
 			printf("\t\t\t\t\t\t DELETING CONTACT\n\n");
 
+			printf("\t\t Index   Name \t\t\t\t Phone Number \t\t Email\n");
 			get_contacts(file);
 			int contactDelete;
 			
@@ -166,7 +167,7 @@ int main() {
 			printf("\t\t\t\t\t\t     CONTACT\n\n");
 			printf("\t\t\t\t\t\t DELETING CONTACT\n\n");
 
-
+			printf("\t\t Index   Name \t\t\t\t Phone Number \t\t Email\n");
 			get_contacts(file);
 
 			printf("\n\t\t ");
