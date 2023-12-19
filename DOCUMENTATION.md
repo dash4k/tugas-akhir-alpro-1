@@ -65,6 +65,45 @@ After we clear our screen, then we are going to print the header of the program.
 After that, we clear the screen one more time and show the user the contact name, phone number, and email that will be saved to the contact app. We then use `system("pause");` to temporarily stop the program until the user press any button on their keyboard. And lastly, we are going to call `add_contact()` function with `addContact` variable and `file` as its parameters.
 </br>
 
+![code5](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/14785c22-f45e-4510-93dc-424febd48749)
+
+The second condition is going to be `Show Contact`, in which we are going to mmake our showing contact feature. This feature is pretty simple, we first clear the screen and then print the contact header. Then we are going to print the table header of the contact we want to show. Then we are going to call the `get_contact()` function with `file` as its parameter. Lastly we are going to stop the program temporarily with `system("pause")`. </br>
+
+![code6](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/ee6d696f-bb50-45ce-a20c-f0388da9dd5e)
+
+The third condition is going to be `Modify Contact`. This is the feature where the user is able to modify the existing contact. Like every feature before this, we first are going to clear the screen and print the contact header. Then we are going to print a header table and `get_contact()` function with `file` as its parameter to show the existing contact. Next, we are going to declare two variables, the first one is an integer type variable called `contactIndex` to store the user's input for which contact they want to modify, the second one is a Contact type variable called modifyContact to store the changes that user's make to the existing contact.</br></br> 
+Then, we are going to make the user input the new name / phone number / email for the existing contact and we store it in the `modifyContact`. Then we are going to call `modify_contact()` function and `contactIndex`, `modifyContact`, and `file` as its parameter to modify the existing contact with the new contact that user's inputted. Then we are going to show the new list with the contact already modified.
+</br>
+
+![code7](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/acd8d344-889d-4643-a555-12ae8fc7cd46)
+
+
+The fourth condition is `Search Contact`. First we are going to clear the screen and print the contact header. Then we are going to declare a string variable called `searchContact` to store the user's input. Then we do the first step one more time, and then we are going to call `search_contact()` function with `searchContact` and `file` as its parameters and we store the return value of that function which is an array of interger, so we are going to store it in an integer pointer type variable called `searched_position`.</br></br>
+After that, we are going to print what the user searched, and print how many contact matched what the user's searched. And when the value of `searched_position[0]` is more than 0 (i.e. we found something that match what the user's searched), we are going to print in which index we found the matching contact. Then we are going to call the `display_search()` function and `searched_position` and `file` as its parameter to display the matching contact we found with `search_contact()`. Then we are going to temporarily stop the program so the user can see which contact they're looking for. Lastly we are going to `free()` `searched_position` so that we dont have any memory leaks.
+</br>
+
+![code8](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/ef549a4c-020e-4920-97a1-3fda26075e3d)
+
+The fifth condition is going to be `Delete Contact`. Firstly, we are going to clear the screen and print the contact header. Then we are going to print a header table and `get_contact()` function with `file` as its parameter to show the existing contact. Then we are going to declare an integer type variable called `contactDelete` for storing the index of the contact the user want to delete.</br></br>
+Then we ask the user to input which index they want to delete, and then we store the user's input to `contactDelete`. Then we are going to call `delete_contact()` function and `contactDelete` and `file` as its parameter. Then we are going to clear the screen and print the contact header one more time and print the newly modified contact with the contact which the user intended to delete is already been deleted.
+</br>
+
+![code9](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/272b7f5b-6dd1-4f4d-8428-fdc4f874c01a)
+
+The sixth condition and the last feature is `Reset Contact`. This feature is pretty self explanatory. It will reset the contact manager and removes everything from the contact file. After we clear the screen and print the contact header, we are going to declare a character type variable called `seriously` in which we are going to store the user's decision.</br></br> 
+Then we are going to confirm the user's decision and store it inside the `seriously` variable. Then we are going to convert the character inside `seriously` to be lower cased with the `tolower()` function. After that we are going to make an if statement for the decision that user made. If the character inside the `seriously` variable is equal to lowered case `y`, we are going to call the `reset_contact` function which will reset the contact app. And if not, than we are going to stop the program temporarily with `system("pause")` function.
+</br>
+
+![code10](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/8420c0b8-443f-46d6-880c-66212849b4f0)
+
+The last condition is going to be `Exit`. After clearing the screen and printing the contact header, we are going to declare a character type variable called `isSure` in which we are going to store the user's decision to exit the program or not. After that we are going to ask the user whether they want to quit or not, and if yes (i.e. `isSure` is equal to lowered case `y`) we are going to set `quit` value to be true and exit the program. And if not, we are going to temporarily stop the program with `system("pause")`.</br></br>
+After breaking from the infinite loop and exiting the program, we will print `printf("\033[0m");` to change the color of the terminal and the text inside it to the default color and returning `0` to the terminal that will indicate the program is successfully run and closed.
+
+
+
+
+
+
 
 
 
