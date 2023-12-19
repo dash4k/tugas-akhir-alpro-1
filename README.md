@@ -1,17 +1,17 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  
-  [![Contributors][contributors-shield]][contributors-url]
-  [![Forks][forks-shield]][forks-url]
-  [![WTFPL License][license-shield]][license-url]
-  
+
+## CONTACT MANAGER IN C
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![WTFPL License][license-shield]][license-url]
+
 </div>
 
-
-
 <!-- PROJECT LOGO -->
-<br />
+</br>
 <div align="center">
   <a href="https://github.com/dash4k/tugas-akhir-alpro-1e">
     <img src="https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/ff71757a-1b51-44b7-b14e-b53b061d9815" alt="Logo" width="230" height="259">
@@ -24,8 +24,21 @@
     <br />
   <a href="https://github.com/dash4k/tugas-akhir-alpro-1/blob/main/documentation.md"><strong>Explore the documentation »</strong></a>
   </p>
-  </br>
 </div>
+</br>
+
+<div align="center">
+  
+  ### Powered by:
+  
+  ![C][C.badge]
+  [![CMake][CMake.org]][CMake-url]
+  [![Visual Studio Code][code.visualstudio.com]][VScode-url]
+  [![Github][Github.com]][Github-url]
+ 
+</div>
+</br>
+
 
 
 
@@ -33,12 +46,7 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
+    <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#license">License</a></li>
@@ -65,17 +73,6 @@ There are six main features of this Contact App:
 * Reseting Contact
 
 Everything is written in pure C and the app is built with CMake.
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-### Built With
-
-* ![C][C.badge]
-* [![CMake][CMake.org]][CMake-url]
-* [![Visual Studio Code][code.visualstudio.com]][VScode-url]
-* [![Github][Github.com]][Github-url]
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
