@@ -39,12 +39,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
+      <a href="#installation">Installation</a>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -84,14 +79,7 @@ Everything is written in pure C and the app is built with CMake.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-To get this app running in you need to get local copy of this app, simply follow these step for installing it on your device.
-
-
-### Installation
+## Installation
 
 1. Clone the repo
    ```sh
