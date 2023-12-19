@@ -16,16 +16,16 @@ For more information, please read the `README.md`
     <li>
       <a href="#main">Main Function</a>
       <ul>
-        <li><a href="main-library">Library Declaration</a></li>
-        <li><a href="main-variable">Local Variable Declaration</a></li>
-        <li><a href="main-menu">Main Menu</a></li>
-        <li><a href="main-case-1">Add Contact</a></li>
-        <li><a href="main-case-2">Show Contact</a></li>
-        <li><a href="main-case-3">Modify Contact</a></li>
-        <li><a href="main-case-4">Search Contact</a></li>
-        <li><a href="main-case-5">Delete Contact</a></li>
-        <li><a href="main-case-6">Reset Contact</a></li>
-        <li><a href="main-case-7">Exit</a></li>
+        <li><a href="#main-library">Library Declaration</a></li>
+        <li><a href="#main-variable">Local Variable Declaration</a></li>
+        <li><a href="#main-menu">Main Menu</a></li>
+        <li><a href="#main-case-1">Add Contact</a></li>
+        <li><a href="#main-case-2">Show Contact</a></li>
+        <li><a href="#main-case-3">Modify Contact</a></li>
+        <li><a href="#main-case-4">Search Contact</a></li>
+        <li><a href="#main-case-5">Delete Contact</a></li>
+        <li><a href="#main-case-6">Reset Contact</a></li>
+        <li><a href="#main-case-7">Exit</a></li>
     </li>
     <li>
       <a href="#primary">Primary Function</a>
