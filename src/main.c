@@ -13,7 +13,7 @@ int main() {
 	while (!quit)
 	{
 		clear_screen();
-		printf("\t\t\t\t\t\t  CONTACT\n\n");
+		printf("\n\t\t\t\t\t\t  CONTACT\n\n");
 		printf("\t\t\t\t\t\t MAIN MENU\n\n\n");
 		printf("\t\t\t 1. Add Contact");
 		printf("\t\t\t\t 4. Search Contact\n\n");
@@ -30,7 +30,7 @@ int main() {
 		case 1:
 			clear_screen();
 
-			printf("\t\t\t\t\t\t    CONTACT\n\n");
+			printf("\n\t\t\t\t\t\t    CONTACT\n\n");
 			printf("\t\t\t\t\t\t ADDING CONTACT\n\n\n");
 
 			Contact addContact;
@@ -48,7 +48,7 @@ int main() {
 
 			clear_screen();
 
-			printf("\t\t\t\t\t\t    CONTACT\n\n");
+			printf("\n\t\t\t\t\t\t    CONTACT\n\n");
 			printf("\t\t\t\t\t\t ADDING CONTACT\n\n\n");
 
 			printf("\t\t\t\tAdding: %s, %s, %s\n", addContact.name, addContact.phone_number, addContact.email);
