@@ -22,7 +22,7 @@
   <p align="center">
     Contact manager app built mainly in C with command-line interface (CLI) for college final project
     <br />
-<!--     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a> -->
+  <a href="https://github.com/dash4k/tugas-akhir-alpro-1"><strong>Explore the docs »</strong></a>
   </p>
   </br>
 </div>
