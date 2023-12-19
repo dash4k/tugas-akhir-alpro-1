@@ -51,7 +51,7 @@ For more information, please read the `README.md`
 Inside the main function or `main.c`, we are only going to write code with the function that are previously defined inside `contact.h` and `util.h`.
 So there will be no function declaration or function initialization be written here.
 </br>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#table-content">back to top</a>)</p>
 </br>
 
 <a name="main-library"></a>
@@ -61,7 +61,7 @@ So there will be no function declaration or function initialization be written h
 These are the libraries that we are going to use inside the `main()` function. The first one is `<stdio.h>` for standard input and output function (e.g. `printf()` and `scanf()`).
 And the second one is `contact.h` which is where our predefined function is located.
 </br>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#table-content">back to top</a>)</p>
 </br>
 
 ### Local Variable Declaration
@@ -75,7 +75,7 @@ Then, we are going to declare several types of variables, each one for different
 * `int choice = -1;` is an integer for storing the user's input of the menu they are choosing.
 * `char ch;` is used to check and clear the input stream later on.
 </br>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#table-content">back to top</a>)</p>
 </br>
 
 <a name="main-menu"></a>
@@ -84,7 +84,7 @@ Then, we are going to declare several types of variables, each one for different
 
 Next, we are going to declare the `while()` loop for our menu driven interface with `!quit` as its parameter. Inside this loop, the first thing we are going to do is clearing the terminal windows screen using `clear_screen()` function. After that we are going to print the main menu for our program with bunch of `printf()` and we're also going to ask for user's choice of which features they like to use with `scanf("%d", &choice);`.
 </br>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#table-content">back to top</a>)</p>
 </br>
 
 <a name="main-case-1"></a>
@@ -95,7 +95,7 @@ Then, we are going to use `switch` statement for our menu driven interface with 
 After we clear our screen, then we are going to print the header of the program. After that we declare a structure called `Contact` and we named it `addContact`. Then we ask the user for the name of the contact, and before we store it inside the `addContact.name` with the `fgets()` function, we first need to clear the input stream with `while ((ch = getchar()) != '\n' && ch != EOF);`. And after that we stored the user's input and then call `rmv_newline()` function with `addContact.name` as its parameter to remove any `\n` that are found inside the `addContact.name`. Next, we are going to ask the user for the contact phone number and the contact email.</br></br>
 After that, we clear the screen one more time and show the user the contact name, phone number, and email that will be saved to the contact app. We then use `system("pause");` to temporarily stop the program until the user press any button on their keyboard. And lastly, we are going to call `add_contact()` function with `addContact` variable and `file` as its parameters.
 </br>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#table-content">back to top</a>)</p>
 </br>
 
 <a name="main-case-2"></a>
@@ -104,7 +104,7 @@ After that, we clear the screen one more time and show the user the contact name
 
 The second condition is going to be `Show Contact`, in which we are going to mmake our showing contact feature. This feature is pretty simple, we first clear the screen and then print the contact header. Then we are going to print the table header of the contact we want to show. Then we are going to call the `get_contact()` function with `file` as its parameter. Lastly we are going to stop the program temporarily with `system("pause")`. 
 </br>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#table-content">back to top</a>)</p>
 </br>
 
 <a name="main-case-3"></a>
@@ -114,7 +114,7 @@ The second condition is going to be `Show Contact`, in which we are going to mma
 The third condition is going to be `Modify Contact`. This is the feature where the user is able to modify the existing contact. Like every feature before this, we first are going to clear the screen and print the contact header. Then we are going to print a header table and `get_contact()` function with `file` as its parameter to show the existing contact. Next, we are going to declare two variables, the first one is an integer type variable called `contactIndex` to store the user's input for which contact they want to modify, the second one is a Contact type variable called modifyContact to store the changes that user's make to the existing contact.</br></br> 
 Then, we are going to make the user input the new name / phone number / email for the existing contact and we store it in the `modifyContact`. Then we are going to call `modify_contact()` function and `contactIndex`, `modifyContact`, and `file` as its parameter to modify the existing contact with the new contact that user's inputted. Then we are going to show the new list with the contact already modified.
 </br>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#table-content">back to top</a>)</p>
 </br>
 
 <a name="main-case-4"></a>
@@ -125,7 +125,7 @@ Then, we are going to make the user input the new name / phone number / email fo
 The fourth condition is `Search Contact`. First we are going to clear the screen and print the contact header. Then we are going to declare a string variable called `searchContact` to store the user's input. Then we do the first step one more time, and then we are going to call `search_contact()` function with `searchContact` and `file` as its parameters and we store the return value of that function which is an array of interger, so we are going to store it in an integer pointer type variable called `searched_position`.</br></br>
 After that, we are going to print what the user searched, and print how many contact matched what the user's searched. And when the value of `searched_position[0]` is more than 0 (i.e. we found something that match what the user's searched), we are going to print in which index we found the matching contact. Then we are going to call the `display_search()` function and `searched_position` and `file` as its parameter to display the matching contact we found with `search_contact()`. Then we are going to temporarily stop the program so the user can see which contact they're looking for. Lastly we are going to `free()` `searched_position` so that we dont have any memory leaks.
 </br>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#table-content">back to top</a>)</p>
 </br>
 
 <a name="main-case-5"></a>
@@ -135,7 +135,7 @@ After that, we are going to print what the user searched, and print how many con
 The fifth condition is going to be `Delete Contact`. Firstly, we are going to clear the screen and print the contact header. Then we are going to print a header table and `get_contact()` function with `file` as its parameter to show the existing contact. Then we are going to declare an integer type variable called `contactDelete` for storing the index of the contact the user want to delete.</br></br>
 Then we ask the user to input which index they want to delete, and then we store the user's input to `contactDelete`. Then we are going to call `delete_contact()` function and `contactDelete` and `file` as its parameter. Then we are going to clear the screen and print the contact header one more time and print the newly modified contact with the contact which the user intended to delete is already been deleted.
 </br>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#table-content">back to top</a>)</p>
 </br>
 
 <a name="main-case-6"></a>
@@ -145,7 +145,7 @@ Then we ask the user to input which index they want to delete, and then we store
 The sixth condition and the last feature is `Reset Contact`. This feature is pretty self explanatory. It will reset the contact manager and removes everything from the contact file. After we clear the screen and print the contact header, we are going to declare a character type variable called `seriously` in which we are going to store the user's decision.</br></br> 
 Then we are going to confirm the user's decision and store it inside the `seriously` variable. Then we are going to convert the character inside `seriously` to be lower cased with the `tolower()` function. After that we are going to make an if statement for the decision that user made. If the character inside the `seriously` variable is equal to lowered case `y`, we are going to call the `reset_contact` function which will reset the contact app. And if not, than we are going to stop the program temporarily with `system("pause")` function.
 </br>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#table-content">back to top</a>)</p>
 </br>
 
 <a name="main-case-7"></a>
@@ -155,7 +155,7 @@ Then we are going to confirm the user's decision and store it inside the `seriou
 The last condition is going to be `Exit`. After clearing the screen and printing the contact header, we are going to declare a character type variable called `isSure` in which we are going to store the user's decision to exit the program or not. After that we are going to ask the user whether they want to quit or not, and if yes (i.e. `isSure` is equal to lowered case `y`) we are going to set `quit` value to be true and exit the program. And if not, we are going to temporarily stop the program with `system("pause")`.</br></br>
 After breaking from the infinite loop and exiting the program, we will print `printf("\033[0m");` to change the color of the terminal and the text inside it to the default color and returning `0` to the terminal that will indicate the program is successfully run and closed.
 </br>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#table-content">back to top</a>)</p>
 </br>
 
 
