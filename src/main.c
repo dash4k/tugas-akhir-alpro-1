@@ -61,7 +61,7 @@ int main() {
 		case 2:
 			clear_screen();
 
-			printf("\t\t\t\t\t\t     CONTACT\n\n");
+			printf("\n\t\t\t\t\t\t     CONTACT\n\n");
 			printf("\t\t\t\t\t\t SHOWING CONTACT\n\n\n");
 
 			printf("\t\t Index   Name \t\t\t\t Phone Number \t\t Email\n");
@@ -75,7 +75,7 @@ int main() {
 		case 3:
 			clear_screen();
 
-			printf("\t\t\t\t\t\t      CONTACT\n\n");
+			printf("\n\t\t\t\t\t\t      CONTACT\n\n");
 			printf("\t\t\t\t\t\t MODIFYING CONTACT\n\n\n");
 
 			printf("\t\t Index   Name \t\t\t\t Phone Number \t\t Email\n");
@@ -88,7 +88,7 @@ int main() {
 
 			clear_screen();
 
-			printf("\t\t\t\t\t\t      CONTACT\n\n");
+			printf("\n\t\t\t\t\t\t      CONTACT\n\n");
 			printf("\t\t\t\t\t\t MODIFYING CONTACT\n\n\n");
 
 			printf("\t\t\t Enter the new name of the contact\t\t: ");
@@ -106,7 +106,7 @@ int main() {
 
 			clear_screen();
 
-			printf("\t\t\t\t\t\t      CONTACT\n\n");
+			printf("\n\t\t\t\t\t\t      CONTACT\n\n");
 			printf("\t\t\t\t\t\t MODIFYING CONTACT\n\n\n");
 
 			printf("\t\t Index   Name \t\t\t\t Phone Number \t\t Email\n");
@@ -120,7 +120,7 @@ int main() {
 		case 4:
 			clear_screen();
 
-			printf("\t\t\t\t\t\t      CONTACT\n\n");
+			printf("\n\t\t\t\t\t\t      CONTACT\n\n");
 			printf("\t\t\t\t\t\t SEARCHING CONTACT\n\n\n");
 
 			char searchContact[50];
@@ -130,7 +130,7 @@ int main() {
 
 			clear_screen();
 
-			printf("\t\t\t\t\t\t      CONTACT\n\n");
+			printf("\n\t\t\t\t\t\t      CONTACT\n\n");
 			printf("\t\t\t\t\t\t SEARCHING CONTACT\n\n\n");
 
 
@@ -152,7 +152,7 @@ int main() {
 		case 5:
 			clear_screen();
 
-			printf("\t\t\t\t\t\t     CONTACT\n\n");
+			printf("\n\t\t\t\t\t\t     CONTACT\n\n");
 			printf("\t\t\t\t\t\t DELETING CONTACT\n\n\n");
 
 			printf("\t\t Index   Name \t\t\t\t Phone Number \t\t Email\n");
@@ -166,7 +166,7 @@ int main() {
 
 			clear_screen();
 
-			printf("\t\t\t\t\t\t     CONTACT\n\n");
+			printf("\n\t\t\t\t\t\t     CONTACT\n\n");
 			printf("\t\t\t\t\t\t DELETING CONTACT\n\n\n");
 
 			printf("\t\t Index   Name \t\t\t\t Phone Number \t\t Email\n");
@@ -180,7 +180,7 @@ int main() {
 		case 6:
 			clear_screen();
 
-			printf("\t\t\t\t\t\t     CONTACT\n\n");
+			printf("\n\t\t\t\t\t\t     CONTACT\n\n");
 			printf("\t\t\t\t\t\t RESETING CONTACT\n\n\n");
 
 			char seriously;
@@ -207,7 +207,7 @@ int main() {
 		case 7:
 			clear_screen();
 
-			printf("\t\t\t\t\t\t     CONTACT\n\n");
+			printf("\n\t\t\t\t\t\t     CONTACT\n\n");
 			printf("\t\t\t\t\t\t EXITING CONTACT\n\n\n");
 
 			char isSure;
