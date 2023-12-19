@@ -69,7 +69,7 @@ There are six main features of this Contact App:
 * Deleting Contact
 * Reseting Contact
 
-Everything is written in pure C and the app is build with CMake.
+Everything is written in pure C and the app is built with CMake.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
