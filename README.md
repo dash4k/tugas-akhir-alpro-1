@@ -20,7 +20,7 @@
 <h3 align="center">Final Project Algoritma dan Pemrograman</h3>
 
   <p align="center">
-    Contact app build mainly in C with command-line interface (CLI) for college final project
+    Contact manager app build mainly in C with command-line interface (CLI) for college final project
     <br />
 <!--     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a> -->
   </p>
