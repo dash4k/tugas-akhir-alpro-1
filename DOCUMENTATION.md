@@ -178,6 +178,8 @@ These are the primary function that we are going to use inside the main function
 ### Contact.h
 This is where we declare the function that we are going to write in `contact.c`, and we can use the function that we created by including `contact.h` inside the `main.c` file.
 </br>
+<p align="right">(<a href="#table-content">back to table of content</a>)</p>
+</br>
 
 <a name="contact-h-libraries"></a>
 #### Libraries Declaration
