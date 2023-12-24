@@ -32,15 +32,22 @@ For more information, please read the `README.md`
     <li>
       <a href="#primary">Primary Function</a>
       <ul>
-        <li><a href="contact-h">contact.h</a></li>
-        <li><a href="contact-c">contact.c</a></li>
+        <li>
+          <a href="#contact-h">contact.h</a>
+          <ul>
+            <li><a href="#contact-h-libraries">Libraries Declaration</a></li>
+            <li><a href="#contact-h-struct">Contact Struct</a></li>
+            <li><a href="#contact-h-function">Function Declaration</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact-c">contact.c</a></li>
       </ul>
     </li>
     <li>
       <a href="#utilities">Utilities Function</a>
       <ul>
-        <li><a href="util-h">util.h</a></li>
-        <li><a href="util-c">util.c</a></li>
+        <li><a href="#util-h">util.h</a></li>
+        <li><a href="#util-c">util.c</a></li>
       </ul>
     </li>
   </ol>
@@ -157,6 +164,55 @@ After breaking from the infinite loop and exiting the program, we will print `pr
 </br>
 <p align="right">(<a href="#table-content">back to table of content</a>)</p>
 </br>
+</br>
+
+
+<a name="primary"></a>
+## Primary Function
+These are the primary function that we are going to use inside the main function, there are two files that we are going to use to create our primary function, the first one is `contact.h` for the function declaration, and the second one is `contact.c` for the function initialization. 
+</br>
+<p align="right">(<a href="#table-content">back to table of content</a>)</p>
+</br>
+
+<a name="contact-h"></a>
+### Contact.h
+This is where we declare the function that we are going to write in `contact.c`, and we can use the function that we created by including `contact.h` inside the `main.c` file.
+</br>
+
+<a name="contact-h-libraries"></a>
+#### Libraries Declaration
+![code1](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/480d490d-242f-4008-96ef-12beaac73bec)
+
+These are the libraries that we are going to use to help us create our function for contact manager. Notice that the first line of code is not like the others. This is because `#pragma` is not a type of library, but rather what we called a preprocessor, which is a command that we can tell the compiler to do something before compiling the rest of the code, and `#pragma once` is used to tell the compiler to only include the current source file once, meaning that everytime we compile the program, the compiler will not read the same header files again.
+</br>
+<p align="right">(<a href="#table-content">back to table of content</a>)</p>
+</br>
+
+<a name="contact-h-struct"></a>
+#### Contact Struct
+![code2](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/9459bf3e-5029-40ab-a1db-cc6bcbd5a35d)
+
+In this file, we also going to declare a struct called `Contact`, which is where we are going to temporarily store the value of user's inputted contact name, phone number, and email, before we store it later on in a different file. We use `string` type of variable inside this struct to store the value of the contact.
+</br>
+<p align="right">(<a href="#table-content">back to table of content</a>)</p>
+</br>
+
+<a name="contact-h-function"></a>
+#### Function Declaration
+![code3](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/df1bb396-b08a-4f34-8949-ae104017b628)
+
+We also going to declare our primary function here, so we don't have to declare it again later on `function.c`. The function that we are going to declare are the following:</br>
+* `get_contacts()`: Is a function used to show the contacts inside a file. Which is going to take a `file` pointer as its parameter and will return an `integer` type of value.
+* `add_contact()`: Is a function that help us store contact that user's inputted to a seperate contact file. Which is going to take a `Contact` type of variable (the struct that we declare before) and a `file` pointer as its parameter and will not return any type of value.
+* `modify_contact()`: Is a function used to modify the value of an existing contact inside a contact file. Which is going to take an `integer` which we are going to use to locate an index of a contact, a `Contact` type of variable, and a `file` pointer as its parameter, and will return an `integer` type of value.
+* `delete_contacts()`: Is a function that's going to remove a single contact inside a contact file. Which is going to take an `integer` which we are going to use to locate an index of a contact and a `file` pointer as its parameter, and will return an `integer` type of value.
+* `search_contact()`: Is a function that we are going to use to iterate over our contact file to find a matching value of the user's searched value and the value inside our contact file. Which is going to take a `string` to be the search term of the function and a `file` pointer as its parameter, and will return an `array` of `integer` as its return value.
+* `display_search()`: Is a function that we are going to use to display the matching value that we found with the `search_contact()` function. Which is going to take the return value of `search_contact` which is an `array` of `integer` to be the index of the contact that we are going to display and a `file` pointer as its parameter, and will return an `integer` type of of value.
+* `reset_contact()`: Is a function used to reset or remove every value inside our created contact file. Which is going to take a `file` pointer as its parameter and will return an `integer` type of value.
+</br>
+
+
+
 
 
 
