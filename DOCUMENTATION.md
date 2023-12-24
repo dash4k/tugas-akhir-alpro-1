@@ -210,6 +210,8 @@ We also going to declare our primary function here, so we don't have to declare 
 * `display_search()`: Is a function that we are going to use to display the matching value that we found with the `search_contact()` function. Which is going to take the return value of `search_contact` which is an `array` of `integer` to be the index of the contact that we are going to display and a `file` pointer as its parameter, and will return an `integer` type of of value.
 * `reset_contact()`: Is a function used to reset or remove every value inside our created contact file. Which is going to take a `file` pointer as its parameter and will return an `integer` type of value.
 </br>
+<p align="right">(<a href="#table-content">back to table of content</a>)</p>
+</br>
 
 
 
