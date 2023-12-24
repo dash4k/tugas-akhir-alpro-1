@@ -40,7 +40,12 @@ For more information, please read the `README.md`
             <li><a href="#contact-h-function">Function Declaration</a></li>
           </ul>
         </li>
-        <li><a href="#contact-c">contact.c</a></li>
+        <li>
+          <a href="#contact-c">contact.c</a>
+          <ul>
+            <li><a href="#contact-c-get-contact">get_contact()</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li>
@@ -215,7 +220,25 @@ We also going to declare our primary function here, so we don't have to declare 
 <p align="right">(<a href="#table-content">back to table of content</a>)</p>
 </br>
 
+<a name="contact-c"></a>
+### Contact.c
+This is where we define our predeclared function in `function.h`. The first line of this file will be `#include "contact.h"` which is the syntax we use to reference the `contact.h` header file.  
+</br>
+<p align="right">(<a href="#table-content">back to table of content</a>)</p>
+</br>
 
+<a name="contact-c-get-contact"></a>
+#### get_contacts()
+![code1](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/b12062a4-bd8b-4811-83da-4e4d7121e78f)
+
+In the get_contact() function, the procedure is pretty simple, first we create the `Contact` type variable for printing the `Contact` value inside the contact file, and then we declare an integer named `total_contacts` and initialize it with `1` to display the first index and later the second until the last index after we modify the value of it inside a `while()` loop later on. </br></br>
+After that we are going to use the `file` pointer from the function parameter to call `fopen()` function to link our function with our seperate contact file and use the `fopen()` function in `rb` or read binary mode so that later we can print the value of our seperate contact file in the user's terminal window. Then we check whether the `file` pointer is equals to `NULL` which mean that the pointer is pointing to no where inside the memory and when that happened we terminate the process immediately by printing a message telling the user that nothing can be found inside the file and then we call the `fclose()` function to close the current file and returning code 1 to the terminal window to inform the user that the program was having an error. </br></br>
+After we successfully locate the `file` pointer location and found data inside it, we then use a `while()` loop with `fread()` as its condition and pass the `Contact` struct that we created as the first parameter to the `fread()` function to be the buffer where the data is stored, `sizeof(contact)` as the second parameter to be the limit of our iteration, `1` as the third parameter to be the number of elements to be read, and lastly `file` as the fourth parameter to be the pointer of the file we linked before. </br></br>
+Inside the `while()` loop we are going to print the value inside the contact file with a specified template to print it like a table. After that we increment the `total_contacts` value to follow how many time we iterate over the file. </br></br>
+After we done with the `while()` loop, we then close the file we open before with `fclose(file)` and return 0 to the terminal to indicate we successfully called the `get_contact()` function. 
+</br>
+<p align="right">(<a href="#table-content">back to table of content</a>)</p>
+</br>
 
 
 
