@@ -46,8 +46,10 @@ For more information, please read the `README.md`
             <li><a href="#contact-c-get-contact">get_contact()</a></li>
             <li><a href="#contact-c-add-contact">add_contact()</a></li>
             <li><a href="#contact-c-modify-contact">modify_contact()</a></li>
-            <li><a href="#contact-c-search-contact">modify_contact()</a></li>
-            <li><a href="#contact-c-delete-contact">modify_contact()</a></li>
+            <li><a href="#contact-c-search-contact">search_contacts()</a></li>
+            <li><a href="#contact-c-display-search">display_search()</a></li>
+            <li><a href="#contact-c-remove-contact">remove_contact()</a></li>
+            <li><a href="#contact-c-reset-contact">reset_contact()</a></li>
           </ul>
         </li>
       </ul>
@@ -302,14 +304,15 @@ After doing everything inside the `if` statement, we then going to free the memo
 
 ![code6](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/df7121c3-7b2d-44c3-bdd9-77d3cad15264)
 
-In this function, we used the return value of the previous function which is `search_contacts` and display the corresponding 
+In this function, we used the return value of the previous function which is `search_contacts` and display the corresponding value inside the contact file. To do this,  we are going to use the same algorithm inside the `get_contact()` function. First we are going to declare a `Contact` struct and an integer called `total_contact` and set it to `1` to be the index of the matching value we want to display. Then we're going to open the contact file using `fread()` in `rb` mode or read binary. Then like always, we are going to check whether the return pointer of `fread()` is pointing to a `NULL` or not.</br></br>
+If not, then we are going to continue to the next phase which is printing the index of the matching value. To do this, we use `while()` loop to iterate over the contact file, inside this loop, first we're going to check if the first index of `searched_positions` is bigger than `0` (i.e. we found some matching value). Then we are going to nest the iteration with a second loop using `for()` statement. Inside this for statement, we are going to check whether the value inside `searched_positions[i]` is equal to the current index inside the `total_contacts`, if yes than we are going to print the value. And after that we increment the value of `total_contacts`.</br></br>
+After that we are going to close the file and open it again to print the name, phone number, and email of the corresponding index that we print before. To do this, we follow the same steps of printing the index, but this time instead of just the index, we are going to print the entire value of the data inside that index. We also going to print a table header before the iteration this time. After that we close the file and return `0` to the terminal to indicate that we have successfully called this function.
 </br>
 <p align="right">(<a href="#table-content">back to table of content</a>)</p>
 </br>
 
 <a name="contact-c-delete-contact"></a>
 #### delete_contact()
-
 ![code4](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/db0b84cf-b6b4-4719-a297-6aeb44ae827a)
 
 The `delete_contact()` function works the same way as the `modify_contact()` function. The main difference is that when the current position of the file contact is equal to the index that the user's inputted inside the `while()` loop (`while (fread(&contact_copy, sizeof(Contact), 1, file))`, instead of modifying the current index of the file with the valuse that the user's inputted, we simply going to do nothing and `continue` the loop. And the rest of the function is pretty much the same as `modify_contact()`.
@@ -317,10 +320,15 @@ The `delete_contact()` function works the same way as the `modify_contact()` fun
 <p align="right">(<a href="#table-content">back to table of content</a>)</p>
 </br>
 
+<a name="contact-c-reset-contact"></a>
+#### reset_contact()
 
+![code7](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/c0906cd5-b54b-4b37-9edc-5fa5a02bd2ca)
 
-
-
+This function is probably the easiest to create. Because to reset a file in C, we're only need to open a file using `wb` or write binary mode and after that we have successfully reseting an intire file. The first thing that we are going to do is without a doubt opening the file using `wb` mode, and after that we check whether the return pointer of `fread()` is not pointing to `NULL`, and if so than we have successfully reset the file and we will close the file we've just opened and return `0`. Else, we are going to print an error message and return `1`.
+</br>
+<p align="right">(<a href="#table-content">back to table of content</a>)</p>
+</br>
 
 
 
