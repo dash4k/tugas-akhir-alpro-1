@@ -36,7 +36,7 @@ For more information, please read the `README.md`
           <a href="#contact-h">contact.h</a>
           <ul>
             <li><a href="#contact-h-libraries">Libraries Declaration</a></li>
-            <li><a href="#contact-h-struct">Contact Struct</a></li>
+            <li><a href="#contact-h-`struct`">Contact Struct</a></li>
             <li><a href="#contact-h-function">Function Declaration</a></li>
           </ul>
         </li>
@@ -108,7 +108,7 @@ Next, we are going to declare the `while()` loop for our menu driven interface w
 ![code3](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/15bd8c74-91a8-44d6-8872-0a190aaf13d2)
 
 Then, we are going to use `switch` statement for our menu driven interface with `choice` as its parameter. The first condition is going to be `Add Contact` which is where we are going to create our adding contact feature. </br></br>
-After we clear our screen, then we are going to print the header of the program. After that we declare a structure called `Contact` and we named it `addContact`. Then we ask the user for the name of the contact, and before we store it inside the `addContact.name` with the `fgets()` function, we first need to clear the input stream with `while ((ch = getchar()) != '\n' && ch != EOF);`. And after that we stored the user's input and then call `rmv_newline()` function with `addContact.name` as its parameter to remove any `\n` that are found inside the `addContact.name`. Next, we are going to ask the user for the contact phone number and the contact email.</br></br>
+After we clear our screen, then we are going to print the header of the program. After that we declare a `struct`ure called `Contact` and we named it `addContact`. Then we ask the user for the name of the contact, and before we store it inside the `addContact.name` with the `fgets()` function, we first need to clear the input stream with `while ((ch = getchar()) != '\n' && ch != EOF);`. And after that we stored the user's input and then call `rmv_newline()` function with `addContact.name` as its parameter to remove any `\n` that are found inside the `addContact.name`. Next, we are going to ask the user for the contact phone number and the contact email.</br></br>
 After that, we clear the screen one more time and show the user the contact name, phone number, and email that will be saved to the contact app. We then use `system("pause");` to temporarily stop the program until the user press any button on their keyboard. And lastly, we are going to call `add_contact()` function with `addContact` variable and `file` as its parameters.
 </br>
 <p align="right">(<a href="#table-content">back to table of content</a>)</p>
@@ -199,11 +199,11 @@ These are the libraries that we are going to use to help us create our function 
 <p align="right">(<a href="#table-content">back to table of content</a>)</p>
 </br>
 
-<a name="contact-h-struct"></a>
+<a name="contact-h-`struct`"></a>
 #### Contact Struct
 ![code2](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/9459bf3e-5029-40ab-a1db-cc6bcbd5a35d)
 
-In this file, we also going to declare a struct called `Contact`, which is where we are going to temporarily store the value of user's inputted contact name, phone number, and email, before we store it later on in a different file. We use `string` type of variable inside this struct to store the value of the contact.
+In this file, we also going to declare a `struct` called `Contact`, which is where we are going to temporarily store the value of user's inputted contact name, phone number, and email, before we store it later on in a different file. We use `string` type of variable inside this `struct` to store the value of the contact.
 </br>
 <p align="right">(<a href="#table-content">back to table of content</a>)</p>
 </br>
@@ -214,7 +214,7 @@ In this file, we also going to declare a struct called `Contact`, which is where
 
 We also going to declare our primary function here, so we don't have to declare it again later on `function.c`. The function that we are going to declare are the following:</br>
 * `get_contacts()`: Is a function used to show the contacts inside a file. Which is going to take a `file` pointer as its parameter and will return an `integer` type of value.
-* `add_contact()`: Is a function that help us store contact that user's inputted to a seperate contact file. Which is going to take a `Contact` type of variable (the struct that we declare before) and a `file` pointer as its parameter and will not return any type of value.
+* `add_contact()`: Is a function that help us store contact that user's inputted to a seperate contact file. Which is going to take a `Contact` type of variable (the `struct` that we declare before) and a `file` pointer as its parameter and will not return any type of value.
 * `modify_contact()`: Is a function used to modify the value of an existing contact inside a contact file. Which is going to take an `integer` which we are going to use to locate an index of a contact, a `Contact` type of variable, and a `file` pointer as its parameter, and will return an `integer` type of value.
 * `delete_contacts()`: Is a function that's going to remove a single contact inside a contact file. Which is going to take an `integer` which we are going to use to locate an index of a contact and a `file` pointer as its parameter, and will return an `integer` type of value.
 * `search_contact()`: Is a function that we are going to use to iterate over our contact file to find a matching value of the user's searched value and the value inside our contact file. Which is going to take a `string` to be the search term of the function and a `file` pointer as its parameter, and will return an `array` of `integer` as its return value.
@@ -237,7 +237,7 @@ This is where we define our predeclared function in `function.h`. The first line
 
 In the get_contact() function, the procedure is pretty simple, first we create the `Contact` type variable for printing the `Contact` value inside the contact file, and then we declare an integer named `total_contacts` and initialize it with `1` to display the first index and later the second until the last index after we modify the value of it inside a `while()` loop later on. </br></br>
 After that we are going to use the `file` pointer from the function parameter to call `fopen()` function to link our function with our seperate contact file and use the `fopen()` function in `rb` or read binary mode so that later we can print the value of our seperate contact file in the user's terminal window. Then we check whether the `file` pointer is equals to `NULL` which mean that the pointer is pointing to no where inside the memory and when that happened we terminate the process immediately by printing a message telling the user that nothing can be found inside the file and then we call the `fclose()` function to close the current file and returning code 1 to the terminal window to inform the user that the program was having an error. </br></br>
-After we successfully locate the `file` pointer location and found data inside it, we then use a `while()` loop with `fread()` as its condition and pass the `Contact` struct that we created as the first parameter to the `fread()` function to be the buffer where the data is stored, `sizeof(contact)` as the second parameter to be the limit of our iteration, `1` as the third parameter to be the number of elements to be read, and lastly `file` as the fourth parameter to be the pointer of the file we linked before. </br></br>
+After we successfully locate the `file` pointer location and found data inside it, we then use a `while()` loop with `fread()` as its condition and pass the `Contact` `struct` that we created as the first parameter to the `fread()` function to be the buffer where the data is stored, `sizeof(contact)` as the second parameter to be the limit of our iteration, `1` as the third parameter to be the number of elements to be read, and lastly `file` as the fourth parameter to be the pointer of the file we linked before. </br></br>
 Inside the `while()` loop we are going to print the value inside the contact file with a specified template to print it like a table. After that we increment the `total_contacts` value to follow how many time we iterate over the file. </br></br>
 After we done with the `while()` loop, we then close the file we open before with `fclose(file)` and return 0 to the terminal to indicate we successfully called the `get_contact()` function. 
 </br>
@@ -268,13 +268,13 @@ In the `modify_contact()` the first thing that we are going to do is opening the
 Then we are going to check whether the `file` pointer is pointing to a `NULL` or not, and when it's not, we are going to continue to the next phase of the function. </br>
 Next we are going to declare and initialize several variable which is: </br></br>
 * `file_size`: an integer type variable used to store the current position of the file pointer with respect to the starting of the file.
-* `new_contacts`: a pointer to a `Contact` type of struct that we are going to use to modify the existing contact file using the contact data that we got from the user.
-* `contact_copy`: a `Contact` type of struct that we are going to use to copy the existing data of the contact from the contact file. 
-* `contact_index`: one of the parameter of `modify_contact` which is an index that we got from the user, and we multiply it by the size of `Contact` struct.
+* `new_contacts`: a pointer to a `Contact` type of `struct` that we are going to use to modify the existing contact file using the contact data that we got from the user.
+* `contact_copy`: a `Contact` type of `struct` that we are going to use to copy the existing data of the contact from the contact file. 
+* `contact_index`: one of the parameter of `modify_contact` which is an index that we got from the user, and we multiply it by the size of `Contact` `struct`.
 * `i`: an integer for iteration purpose.
 </br>
 Then are going to use `fseek(file, 0, SEEK_END)` to change the position of the file pointer one record back from the end of the file.  After that we are going to initialize the `file_size` variable to be the current position of the `file` pointer. And after that we called the `rewind()` function to set the file position indicator to the beginning of the file. </br></br>
-Then we are going to check the validity of the user's inputted index, whether its bigger than the `file_size` variable or less than a single size of `Contact` struct. If one of the condition is not satisfied, we are going to terminate the function, close the file with `fclose()` function, and return 1 to indicate that we are having a problem while executing the function. </br></br>
+Then we are going to check the validity of the user's inputted index, whether its bigger than the `file_size` variable or less than a single size of `Contact` `struct`. If one of the condition is not satisfied, we are going to terminate the function, close the file with `fclose()` function, and return 1 to indicate that we are having a problem while executing the function. </br></br>
 After that we are going to initialize the `new_contact` with `malloc(file_size)` so that the compiler can decide how many bytes we need. And then we are going to iterate over our contact file with `while (fread(&contact_copy, sizeof(Contact), 1, file))` , and if the current position of the file contact is equal to the index that the user's inputted, we are going to modify the current index of the file with the value that the user's inputted inside the `new_contact` (the second parameter of `modify_contact()`) variable. If not then we're just going to copy the value of the old contact file inside the `contact_copy` to `new_contacts` until we've done iterating the whole document.</br></br>
 Next, we are going to open the contact file with `write binary` mode to rewrite the entire file with the newly modified file inside the `new_contacs`with the help of `fwrite()`function, and after successfully rewriting the entire file, we then close the file and free `new_contacts` from the memory to reduce the chance of a memory leaks, and lastly we are going to return `0` to the terminal to indicate that the function is successfully called.
 </br>
@@ -282,11 +282,27 @@ Next, we are going to open the contact file with `write binary` mode to rewrite 
 </br>
 
 <a name="contact-c-search-contact"></a>
-#### search_contact()
+#### search_contacts()
 
 ![code5](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/014fe03b-29af-47f3-8f2f-a842c69b8eb6)
 
-The `search_contacts()` 
+The `search_contacts()` function match the given search term with the value inside the contact app. Like always, the first thing that we are going to do is opening the contact file, this time with `rb` or read binary mode, because we're not doing any type of writing this time. Then, we declare a `Contact` type of `struct` to be the size of `fread()` later on. Then we're going to convert the `search_term` to be lowered case with the help of `str_lowered` function. </br></br>
+We also initialize an integer called `found_count` with `0` as the value, we use this variable to count the number of matching term(s) that we found inside the contact file. After that, we declare the return variable of this function as `searched_positions` and initialize the first index of the with `found_count`, which means that the very first index of the array inside the return value of this function contain the number of matching value inside the contact file.</br></br>
+After that, we are going to call the `rewind()` function to set the file position indicator to the beginning of the file. And after this we're going to start iterating through the file with the `while()` loop and `fread(&current_contact, sizeof(Contact), 1, file)` as the parameter. Inside this `while()` loop, we are going to create the pointer used to find the matching value inside the contact file (name, phone number, email) and we are going to set the value the pointer's value to be lowered case so that we can use `strstr()` function to find the matching value.</br></br>
+We then use an `if()` statement to help use locate the matching value and `(strstr(lowercased_contact_name, lowercased_search_term) != NULL || strstr(lowercased_contact_phone_number, lowercased_search_term) != NULL || strstr(lowercased_contact_email, lowercased_search_term) != NULL)` as the parameter. The `strstr()` function is used to locate the first occurrence of a substring within a string and returns a pointer to the first occurence of the searched string in the contact file.</br></br>
+If we found a matching value (i.e. the `strstr()` function does not return a `NULL pointer`), we then going to increment the value inside `found_count` and after that we are going to resize the the memory block pointed to by `searched_positions` using `realloc(searched_positions, (found_count + 1) * sizeof(int))` function, after that we're simply going to store the matching value inside the corresponding `searched_positions` index using `ftell(file)` divided by the size of the `Contact` struct. And lastly we are going to modify the value of the first index of `searched_positions`.</br></br>
+After doing everything inside the `if` statement, we then going to free the memory used in `lowercased_contact_name, lowercased_contact_phone_number, lowercased_contact_email`. And after we done with the iteration, we are going to free the memory used in `lowercased_search_term`, and after that we close the file and return the return variable which is `searched_positions`. 
+</br>
+<p align="right">(<a href="#table-content">back to table of content</a>)</p>
+</br>
+
+
+<a name="contact-c-display-search"></a>
+#### display_search()
+
+![code6](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/df7121c3-7b2d-44c3-bdd9-77d3cad15264)
+
+In this function, we used the return value of the previous function which is `search_contacts` and display the corresponding 
 </br>
 <p align="right">(<a href="#table-content">back to table of content</a>)</p>
 </br>
@@ -300,6 +316,8 @@ The `delete_contact()` function works the same way as the `modify_contact()` fun
 </br>
 <p align="right">(<a href="#table-content">back to table of content</a>)</p>
 </br>
+
+
 
 
 
