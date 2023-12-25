@@ -339,9 +339,9 @@ This is where we declare our utilities function. We're also going to use this fi
 ![code1](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/5aab2f5e-04bf-46b9-b3ca-7b9bd424ac6b)
 
 Inside `util.h` are the libraries that we are going to use to help us create our utilities function and the declaration of the function we're going to create inside `util.c` file. There are three utilities function that we're going to create:</br></br>
-* `str_tolower()`: Is a function used to lowered the capitalization of a string. It used a string as its parameter and returned the lower cased string of that parameter.
+* `str_tolower()`: Is a function used to lowered the capitalization of a string. It used a string as its parameter and returned the lower cased version of that string of.
 * `clear_screen()`: Is a function used to clear the user's terminal window.
-* `rmv_newline()`: Is a function used to remove `\n` inside a given string.
+* `rmv_newline()`: Is a function used to remove `\n` at the very end of a given string. It used a string as its parameter and returend the modified version (removed `\n`) of the string.
 
 </br>
 <p align="right">(<a href="#table-content">back to table of content</a>)</p>
@@ -356,6 +356,31 @@ This is where we initialize the function that we declare inside `util.h`. The fi
 
 <a name="util-c-string-tolower"></a>
 #### str_tolower()
+![code1](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/2a267d39-7809-4af7-a512-6fdb04c64ca6)
+
+In this function we first going to declare and initialize the return variable of this function called `lowercased_string` using `malloc()` to let the compiler automatically adjust the required size of that return variable. Then we are going to iterate over all character inside the old string and lower cased it one by one using a `for()` loop. We then initialize the very end of that string with a `NUL` character or `\0` to marks the end of the string. After that we are going to return the lowere cased string.
+</br>
+<p align="right">(<a href="#table-content">back to table of content</a>)</p>
+</br>
+
+<a name="util-c-clear-screen"></a>
+#### clear_screen()
+![code2](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/6c2e54b1-3e73-4fd5-b31c-1826c6cc3426)
+
+This function does not takes any argument nor return any value. The sole purpose of this function is to detect the user's operating system and decide which parameter of `system()` function to use to clear the terminal window of the user. If this function detects that the user is using windows, it's going to use `CLS` as the parameter of `system()`. Else, it's going to use `clear` as the parameter.
+</br>
+<p align="right">(<a href="#table-content">back to table of content</a>)</p>
+</br>
+
+<a name="util-c-remove-newline"></a>
+#### rmv_newline()
+![code3](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/bb0f212c-420b-4f7d-9f22-204455ab2db6)
+
+This function iterate over a string and check whether there's `\n` or a new line character at the very end of the string. If yes, then it's going to be removed by the function and change the value inside that index to be `NUL` or `0`.
+</br>
+<p align="right">(<a href="#table-content">back to table of content</a>)</p>
+</br>
+
 
 
 
