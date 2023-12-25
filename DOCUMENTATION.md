@@ -44,6 +44,8 @@ For more information, please read the `README.md`
           <a href="#contact-c">contact.c</a>
           <ul>
             <li><a href="#contact-c-get-contact">get_contact()</a></li>
+            <li><a href="#contact-c-add-contact">add_contact()</a></li>
+            <li><a href="#contact-c-modify-contact">modify_contact()</a></li>
           </ul>
         </li>
       </ul>
