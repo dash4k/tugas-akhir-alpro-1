@@ -147,7 +147,7 @@ After that, we are going to print what the user searched, and print how many con
 </br>
 
 <a name="main-case-5"></a>
-### Remove Contact
+### Delete Contact
 ![code8](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/ef549a4c-020e-4920-97a1-3fda26075e3d)
 
 The fifth condition is going to be `Delete Contact`. Firstly, we are going to clear the screen and print the contact header. Then we are going to print a header table and `get_contact()` function with `file` as its parameter to show the existing contact. Then we are going to declare an integer type variable called `contactDelete` for storing the index of the contact the user want to delete.</br></br>
@@ -248,7 +248,6 @@ After we done with the `while()` loop, we then close the file we open before wit
 
 <a name="contact-c-add-contact"></a>
 #### add_contact()
-
 ![code2](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/631d306e-1bd6-4ea0-a502-9852a1cf3b85)
 
 The add_contact() function is pretty straight foward, first we're going to open the contact file with the fopen() function with `ab` mode or append binary which is the mode we use to continue writing on where we left off in the contact file. Then we are going to check whether the `file` pointer is pointing to a `NULL` or not. After checking the `file` pointer, we then call the `fwrite()` function with the parameter: </br></br>
@@ -285,7 +284,6 @@ Next, we are going to open the contact file with `write binary` mode to rewrite 
 
 <a name="contact-c-search-contact"></a>
 #### search_contacts()
-
 ![code5](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/014fe03b-29af-47f3-8f2f-a842c69b8eb6)
 
 The `search_contacts()` function match the given search term with the value inside the contact app. Like always, the first thing that we are going to do is opening the contact file, this time with `rb` or read binary mode, because we're not doing any type of writing this time. Then, we declare a `Contact` type of `struct` to be the size of `fread()` later on. Then we're going to convert the `search_term` to be lowered case with the help of `str_lowered` function. </br></br>
@@ -301,7 +299,6 @@ After doing everything inside the `if` statement, we then going to free the memo
 
 <a name="contact-c-display-search"></a>
 #### display_search()
-
 ![code6](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/df7121c3-7b2d-44c3-bdd9-77d3cad15264)
 
 In this function, we used the return value of the previous function which is `search_contacts` and display the corresponding value inside the contact file. To do this,  we are going to use the same algorithm inside the `get_contact()` function. First we are going to declare a `Contact` struct and an integer called `total_contact` and set it to `1` to be the index of the matching value we want to display. Then we're going to open the contact file using `fread()` in `rb` mode or read binary. Then like always, we are going to check whether the return pointer of `fread()` is pointing to a `NULL` or not.</br></br>
@@ -322,13 +319,43 @@ The `delete_contact()` function works the same way as the `modify_contact()` fun
 
 <a name="contact-c-reset-contact"></a>
 #### reset_contact()
-
 ![code7](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/c0906cd5-b54b-4b37-9edc-5fa5a02bd2ca)
 
 This function is probably the easiest to create. Because to reset a file in C, we're only need to open a file using `wb` or write binary mode and after that we have successfully reseting an intire file. The first thing that we are going to do is without a doubt opening the file using `wb` mode, and after that we check whether the return pointer of `fread()` is not pointing to `NULL`, and if so than we have successfully reset the file and we will close the file we've just opened and return `0`. Else, we are going to print an error message and return `1`.
 </br>
 <p align="right">(<a href="#table-content">back to table of content</a>)</p>
 </br>
+
+<a name="utilities"></a>
+## Utilities Function
+These are the function used to help us create the primary function. There are two files that we are going to use to create our utilities function, the first one is `util.h` for the function declaration, and the second one is `util.c` for the function initialization.
+</br>
+<p align="right">(<a href="#table-content">back to table of content</a>)</p>
+</br>
+
+<a name="util-h"></a>
+### Util.h
+This is where we declare our utilities function. We're also going to use this file as a header file and include it inside other file so we can use the function that we have created inside `util.c` and use it inside other file.
+![code1](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/5aab2f5e-04bf-46b9-b3ca-7b9bd424ac6b)
+
+Inside `util.h` are the libraries that we are going to use to help us create our utilities function and the declaration of the function we're going to create inside `util.c` file. There are three utilities function that we're going to create:</br></br>
+* `str_tolower()`: Is a function used to lowered the capitalization of a string. It used a string as its parameter and returned the lower cased string of that parameter.
+* `clear_screen()`: Is a function used to clear the user's terminal window.
+* `rmv_newline()`: Is a function used to remove `\n` inside a given string.
+
+</br>
+<p align="right">(<a href="#table-content">back to table of content</a>)</p>
+</br>
+
+<a name="util-c"></a>
+### Util.c
+This is where we initialize the function that we declare inside `util.h`. The first line of this file will be `#include "util.h"` which is the syntax we use to reference the `util.h` header file.
+</br>
+<p align="right">(<a href="#table-content">back to table of content</a>)</p>
+</br>
+
+<a name="util-c-string-tolower"></a>
+#### str_tolower()
 
 
 
