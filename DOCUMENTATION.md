@@ -58,7 +58,14 @@ For more information, please read the `README.md`
       <a href="#utilities">Utilities Function</a>
       <ul>
         <li><a href="#util-h">util.h</a></li>
-        <li><a href="#util-c">util.c</a></li>
+        <li>
+          <a href="#util-c">util.c</a>
+          <ul>
+            <li><a href="#util-c-string-tolower">str_tolower()</a></li>
+            <li><a href="#util-c-clear-screen">clear_screen()</a></li>
+            <li><a href="#util-c-remove-newline">rmv_newline()</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ol>
