@@ -240,6 +240,44 @@ After we done with the `while()` loop, we then close the file we open before wit
 <p align="right">(<a href="#table-content">back to table of content</a>)</p>
 </br>
 
+<a name="contact-c-add-contact"></a>
+#### add_contact()
+
+![code2](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/631d306e-1bd6-4ea0-a502-9852a1cf3b85)
+
+The add_contact() function is pretty straight foward, first we're going to open the contact file with the fopen() function with `ab` mode or append binary which is the mode we use to continue writing on where we left off in the contact file. Then we are going to check whether the `file` pointer is pointing to a `NULL` or not. After checking the `file` pointer, we then call the `fwrite()` function with the parameter: </br></br>
+* `&new_contact`: the parameter of the `add_function()` which we get from asking the user in the `main` file.
+* `sizeof(contact)`: the required size of `Contact` inside a file.
+* `1`: the number of element that we want to write inside the contact file.
+* `file`: the pointer to the file we opened before.
+</br>
+After we successfully called the `fwrite()` function and write the contact that user's have just inputted, we then going to close the file that we already opened before with the `fclose()` function, and after that we are finished with this function.
+</br>
+<p align="right">(<a href="#table-content">back to table of content</a>)</p>
+</br>
+
+<a name="contact-c-modify-contact"></a>
+#### modify_contact()
+
+![code3](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/c90b0858-55a3-437d-99ea-b19ac9b06c01)
+
+In the `modify_contact()` the first thing that we are going to do is opening the contact file in `rb` mode with `fopen()` function using the `file` pointer that we get from the `modify_contact()` parameter. </br>
+Then we are going to check whether the `file` pointer is pointing to a `NULL` or not, and when it's not, we are going to continue to the next phase of the function. </br>
+Next we are going to declare and initialize several variable which is: </br></br>
+* `file_size`: an integer type variable used to store the current position of the file pointer with respect to the starting of the file.
+* `new_contacts`: a pointer to a `Contact` type of struct that we are going to use to modify the existing contact file using the contact data that we got from the user.
+* `contact_copy`: a `Contact` type of struct that we are going to use to copy the existing data of the contact from the contact file. 
+* `contact_index`: one of the parameter of `modify_contact` which is an index that we got from the user, and we multiply it by the size of `Contact` struct.
+* `i`: an integer for iteration purpose.
+</br>
+Then are going to use `fseek(file, 0, SEEK_END)` to change the position of the file pointer one record back from the end of the file.  After that we are going to initialize the `file_size` variable to be the current position of the `file` pointer. And after that we called the `rewind()` function to set the file position indicator to the beginning of the file. </br></br>
+Then we are going to check the validity of the user's inputted index, whether its bigger than the `file_size` variable or less than a single size of `Contact` struct. If one of the condition is not satisfied, we are going to terminate the function, close the file with `fclose()` function, and return 1 to indicate that we are having a problem while executing the function. </br></br>
+After that we are going to initialize the `new_contact` with `malloc(file_size)` so that the compiler can decide how many bytes we need. And then we are going to iterate over our contact file with `while (fread(&contact_copy, sizeof(Contact), 1, file))` , and if the current position of the file contact is equal to the index that the user's inputted, we are going to modify the current index of the file with the value that the user's inputted inside the `new_contact` (the second parameter of `modify_contact()`) variable. If not then we're just going to copy the value of the old contact file inside the `contact_copy` to `new_contacts` until we've done iterating the whole document.</br></br>
+Next, we are going to open the contact file with `write binary` mode to rewrite the entire file with the newly modified file inside the `new_contacs`with the help of `fwrite()`function, and after successfully rewriting the entire file, we then close the file and free `new_contacts` from the memory to reduce the chance of a memory leaks, and lastly we are going to return `0` to the terminal to indicate that the function is successfully called.
+
+
+
+
 
 
 
