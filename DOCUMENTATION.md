@@ -46,6 +46,8 @@ For more information, please read the `README.md`
             <li><a href="#contact-c-get-contact">get_contact()</a></li>
             <li><a href="#contact-c-add-contact">add_contact()</a></li>
             <li><a href="#contact-c-modify-contact">modify_contact()</a></li>
+            <li><a href="#contact-c-search-contact">modify_contact()</a></li>
+            <li><a href="#contact-c-delete-contact">modify_contact()</a></li>
           </ul>
         </li>
       </ul>
@@ -260,7 +262,6 @@ After we successfully called the `fwrite()` function and write the contact that 
 
 <a name="contact-c-modify-contact"></a>
 #### modify_contact()
-
 ![code3](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/c90b0858-55a3-437d-99ea-b19ac9b06c01)
 
 In the `modify_contact()` the first thing that we are going to do is opening the contact file in `rb` mode with `fopen()` function using the `file` pointer that we get from the `modify_contact()` parameter. </br>
@@ -276,6 +277,35 @@ Then are going to use `fseek(file, 0, SEEK_END)` to change the position of the f
 Then we are going to check the validity of the user's inputted index, whether its bigger than the `file_size` variable or less than a single size of `Contact` struct. If one of the condition is not satisfied, we are going to terminate the function, close the file with `fclose()` function, and return 1 to indicate that we are having a problem while executing the function. </br></br>
 After that we are going to initialize the `new_contact` with `malloc(file_size)` so that the compiler can decide how many bytes we need. And then we are going to iterate over our contact file with `while (fread(&contact_copy, sizeof(Contact), 1, file))` , and if the current position of the file contact is equal to the index that the user's inputted, we are going to modify the current index of the file with the value that the user's inputted inside the `new_contact` (the second parameter of `modify_contact()`) variable. If not then we're just going to copy the value of the old contact file inside the `contact_copy` to `new_contacts` until we've done iterating the whole document.</br></br>
 Next, we are going to open the contact file with `write binary` mode to rewrite the entire file with the newly modified file inside the `new_contacs`with the help of `fwrite()`function, and after successfully rewriting the entire file, we then close the file and free `new_contacts` from the memory to reduce the chance of a memory leaks, and lastly we are going to return `0` to the terminal to indicate that the function is successfully called.
+</br>
+<p align="right">(<a href="#table-content">back to table of content</a>)</p>
+</br>
+
+<a name="contact-c-search-contact"></a>
+#### search_contact()
+
+![code5](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/014fe03b-29af-47f3-8f2f-a842c69b8eb6)
+
+The `search_contacts()` 
+</br>
+<p align="right">(<a href="#table-content">back to table of content</a>)</p>
+</br>
+
+<a name="contact-c-delete-contact"></a>
+#### delete_contact()
+
+![code4](https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/db0b84cf-b6b4-4719-a297-6aeb44ae827a)
+
+The `delete_contact()` function works the same way as the `modify_contact()` function. The main difference is that when the current position of the file contact is equal to the index that the user's inputted inside the `while()` loop (`while (fread(&contact_copy, sizeof(Contact), 1, file))`, instead of modifying the current index of the file with the valuse that the user's inputted, we simply going to do nothing and `continue` the loop. And the rest of the function is pretty much the same as `modify_contact()`.
+</br>
+<p align="right">(<a href="#table-content">back to table of content</a>)</p>
+</br>
+
+
+
+
+
+
 
 
 
