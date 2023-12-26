@@ -93,8 +93,7 @@ Everything is written in pure C and the app is built with CMake.
 4. Run tugasakhir
    ```sh
    ./tugasakhir
-   ```
-   or
+   ```or
    ```sh
    ./tugasakhir.exe
    ```
