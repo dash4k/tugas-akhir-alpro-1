@@ -1,9 +1,3 @@
 {
-  "cmake.sourceDirectory": "C:/Users/Johntor81/Documents/VScode/Informatika1/tugas-akhir-alpro-1/src",
-  "C_Cpp.errorSquiggles": "disabled",
-  "files.associations": {
-    "contact.h": "c",
-    "ncurses.h": "c",
-    "string.h": "c"
-  }
+  "cmake.sourceDirectory": "/home/jeanjacket/doddealpro/tugas-akhir-alpro-1/src"
 }

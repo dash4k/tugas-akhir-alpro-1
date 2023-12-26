@@ -4,5 +4,6 @@
 #include <stdio.h>
 
 char* str_tolower(const char* str);
-void clear_screen(void);
+void clear_screen();
 void rmv_newline(char* str);
+void sys_pause();

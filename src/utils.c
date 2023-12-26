@@ -18,6 +18,14 @@ void clear_screen(void) {
     #endif
 }
 
+void sys_pause() {
+    #ifdef _WIN32
+        system("pause");
+    #else
+        system("read");
+    #endif
+}
+
 void rmv_newline(char* str) {
   int len = strlen(str);
   if( str[len-1] == '\n' )

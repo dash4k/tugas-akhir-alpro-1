@@ -6,11 +6,11 @@ int main() {
 	printf("\033[44m");
 	printf("\033[1;36m");
 	FILE* file;
-	bool quit = false;
+	int quit = 1;
 	int choice = -1;
 	char ch;
 
-	while (!quit)
+	while (quit != 0)
 	{
 		clear_screen();
 		printf("\n\t\t\t\t\t\t  CONTACT\n\n");
@@ -53,8 +53,7 @@ int main() {
 
 			printf("\t\t\t\tAdding: %s, %s, %s\n", addContact.name, addContact.phone_number, addContact.email);
 			printf("\n\n\t\t\t\t\t ");
-			system("pause");
-
+			sys_pause();
 			add_contact(addContact, file);
 			break;
 		
@@ -68,8 +67,7 @@ int main() {
 			get_contacts(file);
 			
 			printf("\n\n\t\t ");
-			system("pause");
-			
+			sys_pause();			
 			break;
 		
 		case 3:
@@ -113,8 +111,7 @@ int main() {
 			get_contacts(file);
 
 			printf("\n\n\t\t ");
-			system("pause");
-
+			sys_pause();
 			break;
 
 		case 4:
@@ -143,8 +140,7 @@ int main() {
 			display_search(searched_positions, file);
 
 			printf("\n\n\t\t ");
-			system("pause");
-
+			sys_pause();
 			free(searched_positions);
 
 			break;
@@ -173,8 +169,7 @@ int main() {
 			get_contacts(file);
 
 			printf("\n\n\t\t ");
-			system("pause");
-
+			sys_pause();
 			break;
 
 		case 6:
@@ -199,8 +194,8 @@ int main() {
 			else
 			{
 				printf("\n\n\t\t\t\t\t ");
-				system("pause");
-			}
+
+sys_pause();			}
 
 			break;
 
@@ -220,13 +215,13 @@ int main() {
 			if (isSure == 'y')
 			{
 				printf("\n\n\t\t\t\t\t\t   Good Bye! :< \n\n");
-				quit = true;
+				quit = 0;
 			}
 			else
 			{
 				printf("\n\n\t\t\t\t\t ");
-				system("pause");
-			}
+
+sys_pause();			}
 			
 			break;
 
