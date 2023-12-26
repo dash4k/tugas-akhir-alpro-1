@@ -76,7 +76,7 @@ Everything is written in pure C and the app is built with CMake.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## Installation
+## Build from source
 
 1. Clone the repo
    ```sh
@@ -84,11 +84,19 @@ Everything is written in pure C and the app is built with CMake.
    ```
 2. Go to the build directory
    ```sh
-   ...\tugas-akhir-alpro-1\build
+   cd tugas-akhir-alpro-1
    ```
-3. Run tugaskahir
-   ```js
-   ...\tugas-akhir-alpro-1\build\tugasakhir.exe
+3. Make the binary
+   ```sh
+   cmake -S ./src -B ./build && cd build && make
+   ```
+4. Run tugasakhir
+   ```sh
+   ./tugasakhir
+   ```
+   or
+   ```sh
+   ./tugasakhir.exe
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
